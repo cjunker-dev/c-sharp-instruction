@@ -7,21 +7,20 @@ namespace Project_4_4_CommonDivisorCalculator {
             String choice = "y";
             while (choice == "y") { 
                 Console.Write("Enter first number: ");
-                int x = Int32.Parse(Console.ReadLine());
+                int gcd = 1;
+                int num1 = Int32.Parse(Console.ReadLine());
                 Console.Write("Enter second number: ");
-                int y = Int32.Parse(Console.ReadLine());
-                while (x > 0) {
-
-
-                    while (!(y < x)) {
-                        y -= x;
+                int num2 = Int32.Parse(Console.ReadLine());
+                for (int i = 1; i <= num1 && i <= num2; i++) {
+                    if (num1 % i == 0 && num2 % i == 0) {
+                        gcd = i;
                     }
-                    while (!(x < y)) {
-                        x -= y;
-                    }
-
                 }
-                Console.WriteLine("Greatest common divisor: " + x);
+
+
+
+
+                Console.WriteLine(gcd);
                 Console.WriteLine("Continue? (y/n):");
                 choice = Console.ReadLine();
 

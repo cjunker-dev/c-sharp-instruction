@@ -16,6 +16,7 @@ namespace Project_3_2_Travel_Time_Calculator {
                 double timeTravelHours = (miles / mph);
                 double minutesLeft = timeTravelMinutes % 60;
                 //this needs to return the hours and minutes
+                //this math is wrong, there are definitely some rounding errors
                 Console.WriteLine("Hours: " + Math.Round(timeTravelHours, 0));
                 Console.WriteLine("Minutes: " + Math.Round(minutesLeft, 0));
 
