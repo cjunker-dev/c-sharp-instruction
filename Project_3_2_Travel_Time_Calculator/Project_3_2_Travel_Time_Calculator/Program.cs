@@ -12,9 +12,12 @@ namespace Project_3_2_Travel_Time_Calculator {
                 double mph = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Estimated travel time");
                 Console.WriteLine("---------------------");
-                double timeTravel = miles / mph;
+                double timeTravelMinutes = (miles / mph) * 60;
+                double timeTravelHours = (miles / mph);
+                double minutesLeft = timeTravelMinutes % 60;
                 //this needs to return the hours and minutes
-                Console.WriteLine("Travel time: " + timeTravel);
+                Console.WriteLine("Hours: " + Math.Round(timeTravelHours, 0));
+                Console.WriteLine("Minutes: " + Math.Round(minutesLeft, 0));
 
             }
 
